@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Hero.scss';
+import PropTypes from 'prop-types';
 
 
 const Hero = props => (
@@ -11,3 +12,7 @@ const Hero = props => (
 
 
 export default Hero;
+
+Hero.propTypes = {
+  titleText: PropTypes.node.isRequired,
+};
