@@ -11,7 +11,7 @@ class Column extends React.Component {
         cards: this.props.cards || {},
     }
 
-    static PropTypes = {
+    static propTypes = {
         cards: PropTypes.array,
         title: PropTypes.string.isRequired,
     }
@@ -23,6 +23,7 @@ class Column extends React.Component {
                     ...state.cards,
                     {
                         key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
+                        title: title
                     }
                 ]
             }
@@ -34,7 +35,7 @@ class Column extends React.Component {
             <section className={styles.component}>
                 <h3 className={styles.title}>{this.props.title}
                     <span className={styles.icon}>
-                        <icon name={this.props.icon} />
+                        <Icon name={this.props.icon} />
                     </span>
                 </h3>
                 <div className={styles.cards}>
